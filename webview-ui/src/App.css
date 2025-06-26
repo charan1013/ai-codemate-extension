@@ -1,0 +1,119 @@
+.app-container {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f2f4f7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.chat-window {
+  width: 100%;
+  max-width: 600px;
+  max-height: 65vh;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+}
+
+.chat-bubble {
+  max-width: 80%;
+  padding: 12px 18px;
+  margin: 10px 0;
+  border-radius: 18px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.chat-bubble.user {
+  background-color: #007bff;
+  color: #fff;
+  border-bottom-right-radius: 4px;
+  align-self: flex-end;
+  float: right;
+  clear: both;
+  animation: fadeInRight 0.3s ease;
+}
+
+.chat-bubble.ai {
+  background-color: #f1f0f0;
+  color: #333;
+  border-bottom-left-radius: 4px;
+  align-self: flex-start;
+  float: left;
+  clear: both;
+  animation: fadeInLeft 0.3s ease;
+}
+
+.chat-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

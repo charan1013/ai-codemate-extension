@@ -1,0 +1,9 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+build/
+webview-ui/node_modules
+webview-ui/build
+.env
